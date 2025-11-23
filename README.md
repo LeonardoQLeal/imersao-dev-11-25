@@ -35,48 +35,10 @@ O grande diferencial deste projeto é o seu **gerador de conteúdo automatizado*
     *   **Google Gemini API:** Para a geração de conteúdo de forma programática.
     *   **dotenv:** Para o gerenciamento seguro de chaves de API através de variáveis de ambiente.
 
-## ⚙️ Como Executar o Projeto
-
-### 1. Visualizar a Interface Web
-
-1.  Clone este repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    ```
-2.  Navegue até a pasta do projeto.
-3.  Abra o arquivo `index.html` (ou o arquivo principal da sua página) em qualquer navegador web.
-
-### 2. Executar o Gerador de Conteúdo
-
-O gerador de conteúdo é um script Node.js que popula o arquivo `data.json`.
-
-1.  **Pré-requisitos:**
-    *   Você precisa ter o Node.js instalado.
-    *   Você precisa de uma chave de API do Google Gemini.
-
-2.  **Configuração:**
-    *   Na raiz da pasta do gerador (`/node-example-base-content-main/`), crie um arquivo chamado `.env`.
-    *   Dentro do arquivo `.env`, adicione sua chave de API:
-      ```
-      GEMINI_API_KEY="SUA_CHAVE_DE_API_AQUI"
-      ```
-
-3.  **Instalação de Dependências:**
-    *   Navegue até a pasta do gerador e execute:
-      ```bash
-      npm install
-      ```
-
-4.  **Execução do Script:**
-    *   Para iniciar a geração de novos itens na base de conhecimento, execute:
-      ```bash
-      npm start
-      ```
-    *   O script irá ler o arquivo `baseDeConhecimento.json` (ou `data.json`), gerar novos itens e salvar o arquivo atualizado.
 
 ## 🎯 Objetivos e Aprendizados
 
-Este projeto foi desenvolvido como parte da **Imersão Dev da Alura**, com o objetivo de consolidar conhecimentos em desenvolvimento web e explorar a integração com APIs de Inteligência Artificial. Os principais aprendizados incluem:
+Este projeto foi desenvolvido como parte da Imersão Dev da Alura, com o objetivo de consolidar conhecimentos em desenvolvimento web e explorar a integração com APIs de Inteligência Artificial. Os principais aprendizados incluem:
 
 *   Manipulação do DOM com JavaScript puro para criar interfaces dinâmicas.
 *   Uso da `Fetch API` para carregar dados de forma assíncrona.
@@ -84,5 +46,3 @@ Este projeto foi desenvolvido como parte da **Imersão Dev da Alura**, com o obj
 *   Criação de scripts de automação com Node.js.
 *   Integração com uma API externa (Google Gemini) para geração de conteúdo.
 *   Gerenciamento de chaves de API e configurações de ambiente com `.env`.
-
----
