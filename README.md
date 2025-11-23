@@ -1,0 +1,88 @@
+# Base de Conhecimento de Tecnologias (Tech Knowledge Base)
+
+![Demonstração da Interface](https://img.shields.io/badge/Interface-Web-blue)
+![Tecnologia](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Tecnologia](https://img.shields.io/badge/Node.js-Scripting-green)
+![API](https://img.shields.io/badge/API-Gemini-orange)
+
+Neste meu primeiro projeto, tive a oportunidade juntamente com a Alura de criar uma aplicação web interativa que funciona como uma "Base de Conhecimento" para tecnologias de desenvolvimento de software. A interface permite aos usuários visualizar e pesquisar dinamicamente uma lista de ferramentas, linguagens e frameworks, exibindo informações relevantes sobre cada um.
+
+O grande diferencial deste projeto é o seu **gerador de conteúdo automatizado**, um script Node.js que utiliza a **API do Google Gemini** para popular e expandir a base de dados de forma inteligente, garantindo que o conteúdo seja sempre rico e atualizado.
+
+## ✨ Funcionalidades Principais
+
+### Interface do Usuário (Frontend)
+*   **Visualização em Cards:** As tecnologias são apresentadas em um layout de cards limpo e organizado.
+*   **Busca Dinâmica:** Um campo de busca permite filtrar os cards em tempo real, pesquisando por nome ou descrição da tecnologia.
+*   **Responsividade (Conceito):** A estrutura é baseada em HTML semântico e CSS, pronta para ser adaptada para diferentes tamanhos de tela.
+*   **Links Externos:** Cada card contém um link "Saiba mais" que direciona para a página oficial da tecnologia.
+
+### Gerador de Conteúdo (Backend/Script)
+*   **Automação com IA:** Utiliza um script Node.js para se conectar à API do Google Gemini.
+*   **Geração Estruturada:** O script instrui a IA a gerar dados em um formato JSON específico, incluindo nome, descrição, ano de criação, link e tags.
+*   **Expansão Inteligente:** O gerador lê a base de dados existente para evitar a duplicação de conteúdo, solicitando à IA que crie apenas novas entradas.
+*   **Resiliência:** O script possui um mecanismo de retentativas (`retries`) com `delay` exponencial para lidar com possíveis falhas na comunicação com a API.
+
+## 🚀 Tecnologias Utilizadas
+
+*   **Frontend:**
+    *   **HTML5:** Para a estrutura semântica da página.
+    *   **CSS3:** (Implícito) Para a estilização dos componentes.
+    *   **JavaScript (ES6+):** Para a manipulação do DOM, interatividade, e consumo de dados (`fetch API`).
+
+*   **Backend (Script de Geração):**
+    *   **Node.js:** Ambiente de execução para o script de automação.
+    *   **Google Gemini API:** Para a geração de conteúdo de forma programática.
+    *   **dotenv:** Para o gerenciamento seguro de chaves de API através de variáveis de ambiente.
+
+## ⚙️ Como Executar o Projeto
+
+### 1. Visualizar a Interface Web
+
+1.  Clone este repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    ```
+2.  Navegue até a pasta do projeto.
+3.  Abra o arquivo `index.html` (ou o arquivo principal da sua página) em qualquer navegador web.
+
+### 2. Executar o Gerador de Conteúdo
+
+O gerador de conteúdo é um script Node.js que popula o arquivo `data.json`.
+
+1.  **Pré-requisitos:**
+    *   Você precisa ter o Node.js instalado.
+    *   Você precisa de uma chave de API do Google Gemini.
+
+2.  **Configuração:**
+    *   Na raiz da pasta do gerador (`/node-example-base-content-main/`), crie um arquivo chamado `.env`.
+    *   Dentro do arquivo `.env`, adicione sua chave de API:
+      ```
+      GEMINI_API_KEY="SUA_CHAVE_DE_API_AQUI"
+      ```
+
+3.  **Instalação de Dependências:**
+    *   Navegue até a pasta do gerador e execute:
+      ```bash
+      npm install
+      ```
+
+4.  **Execução do Script:**
+    *   Para iniciar a geração de novos itens na base de conhecimento, execute:
+      ```bash
+      npm start
+      ```
+    *   O script irá ler o arquivo `baseDeConhecimento.json` (ou `data.json`), gerar novos itens e salvar o arquivo atualizado.
+
+## 🎯 Objetivos e Aprendizados
+
+Este projeto foi desenvolvido como parte da **Imersão Dev da Alura**, com o objetivo de consolidar conhecimentos em desenvolvimento web e explorar a integração com APIs de Inteligência Artificial. Os principais aprendizados incluem:
+
+*   Manipulação do DOM com JavaScript puro para criar interfaces dinâmicas.
+*   Uso da `Fetch API` para carregar dados de forma assíncrona.
+*   Implementação de funcionalidades de busca e filtro no frontend.
+*   Criação de scripts de automação com Node.js.
+*   Integração com uma API externa (Google Gemini) para geração de conteúdo.
+*   Gerenciamento de chaves de API e configurações de ambiente com `.env`.
+
+---
